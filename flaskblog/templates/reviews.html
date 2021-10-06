@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="py-4">
+
+    {% for i in reviews %}
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="bg-white rounded shadow-sm sidebar-page-right c">
+                    <div>
+                        <div class="p-3 border-bottom">
+                            <h5> Movie: {{ i.title }} </h5>
+                            <p> Review: {{i.review}} </p>
+                            <div class="stars">
+                                {% for i in i.star|ran %}
+                                <span style="color: yellow;" class="fa fa-star checked"></span>
+                                {% endfor %}
+
+                            </div>
+                            <div class="row d-flex align-items-center form-group mt-3">
+                                <div class="col-md-6">
+                                    <div class="card" style="width: 100%;">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="row align-items-center">
+                                                    <p class="col-md-4">
+                                                        Given by
+                                                    </p>
+                                                    <p class="col-md-8 text-right">
+                                                        {{ i.author }}
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="row align-items-center">
+                                                    <p class="col-md-4">
+                                                        Date
+                                                    </p>
+                                                    <p class="col-md-8 text-right">
+                                                        {{ i.created_at }}
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="img-fluid img-large" src=" {{i.link}} " alt="Card image cap">
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
+
+{% endblock content %}
