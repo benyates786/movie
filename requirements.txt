@@ -18,3 +18,4 @@ Werkzeug==2.0.2
 pillow
 gunicorn
 flask-wtf
+email-validator
