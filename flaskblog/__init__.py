@@ -1,5 +1,4 @@
 
-from flaskblog import routes
 from flask import Flask
 from flask_pymongo import PyMongo
 import flask
@@ -21,3 +20,5 @@ login_manager.login_message_category = 'info'
 def load_user(user_id):
     users = mongo.db.users
     return users.find_one({'id': user_id})
+
+from flaskblog import routes
