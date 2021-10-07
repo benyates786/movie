@@ -191,7 +191,9 @@ div.c-item > a > div.content > div.content-column > div.d-flex {
 }
 
 div.c-item > a > div.content > div.content-column > form > button {
-  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   height: 30px;
   color: white;
   padding: 0px 10px !important;
