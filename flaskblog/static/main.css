@@ -206,9 +206,9 @@ div.c-item > a > div.content > div.content-column > form > button:focus {
   outline: none;
 }
 
-div.c-item > a > div.content > div.content-column > div.w-100 {
+/*div.c-item > a > div.content > div.content-column > div.w-100 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 125px;
-}
+}*/
